@@ -1,63 +1,119 @@
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
-#include <string>
+//#include <string>
+#include <vector>
+#include <sstream>
 using namespace std ;
 
-int charCnt ( string fileName , char letter ) ;
+vector<int> split(const string &str);
 
-int main ( ) {
+int main(int argc, char* argv[]) {
 
-    string fileName ;
-    cout << "Enter the name of the input file: " ;
-    cout << endl ;
-
-    char letter ;
-
-    cin >> fileName ;
-    cin.ignore();
-    cout << "Enter a character: " ;
-    cout << endl ;
-    cin.get ( letter ) ;
-
-
-
-    charCnt ( fileName , letter ) ;
-
-    return 0 ;
-
-}
-
-int charCnt ( string fileName , char letter )
-{
-
-    // OPEN FILE
     ifstream input ;
-    input.open ( fileName ) ;
+    ofstream output ;
+
+    // OPEN INPUT FILE
+    input.open ( argv [ 1 ] ) ;
+
+    vector < int > numbers ;
 
     if (!input.is_open()) {
-        cout << "Error opening " << fileName << endl;
-        exit ( 1 ) ; // 1 indicates error
+        cout << "Error opening " << argv[1] << endl;
+        exit(1);
     }
-    int counter = 0 ;
-    char look ;
 
-    while ( input.get( look ) )
+    // read file into line
+    string fileLine;
+    while ( getline ( input , fileLine ) )
     {
-        if ( look == letter )
-        {
-            counter ++ ;
+        // splint line into vector
+        numbers = split(fileLine);
+    }
+
+    int total = 0 ;
+
+    // find total of numbers added
+
+    for (unsigned int i = 0; i < numbers.size(); i++) {
+        //cout << numbers.at(i) << ' ';
+        total = total + numbers.at ( i ) ;
+    }
+
+    int average = total / ( numbers.size ( ) ) ;
+
+    //cout << average ;
+
+    for (unsigned int p = 0; p < numbers.size(); p++) {
+        numbers.at (p) = numbers.at ( p ) - average ;
+    }
+
+    output.open (argv [ 2 ] ) ;
+
+    for ( unsigned int p = 0 ; p < numbers.size ( ) ; p ++ ) {
+        if (p == numbers.size() - 1) {
+            output << numbers.at(p);
+        } else {
+            output << numbers.at ( p ) << "," ;
         }
     }
 
-    cout << "# of " << letter << "'s: " << counter ;
 
-    cout << endl ;
+//    for (int x = 0; x < numbers.size(); x++) {
+//        cout << numbers.at(x) << ' ';
+//    }
 
-    return counter ;
 
+
+    //istringstream inSS(userInfo);
+
+
+//    string str = "1,2,3,4,5";
+//    char sep = ',';
+//
+//    vector<int> tokens = split(str, sep);
+//    for (auto &i: tokens) {
+//        cout << i << ' ';
+//    }
+//
+//    string fileLine ;
+//
+//    while ( getline ( input , fileLine ) )
+//    {
+//
+//    }
+
+//
+//
+//
+//
+//
+//    // Prints argc and argv values
+//    cout << "argc: " << argc << endl;
+//    for (i = 0; i < argc; ++i) {
+//        cout << "argv[" << i << "]: " << argv[i] << endl;
+//    }
+//
+//    cout << "Hello " << argv[1] << endl;
+//
+//    cout << "I'm " << argv[2] << endl;
+
+    return 0;
 }
 
 
+vector<int> split(const string &str)
+{
+    vector<int> tokens;
 
+    int i;
+    stringstream ss(str);
+    while (ss >> i) {
+        tokens.push_back(i);
+        if (ss.peek() == ',') {
+            ss.ignore();
+        }
+    }
 
+    return tokens;
+}
