@@ -35,17 +35,14 @@ int main(int argc, char* argv[]) {
 
     // find total of numbers added
 
-    for (unsigned int i = 0; i < numbers.size(); i++) {
-        //cout << numbers.at(i) << ' ';
-        total = total + numbers.at ( i ) ;
+    for (int number : numbers) {
+        total = total + number ;
     }
 
     int average = total / ( numbers.size ( ) ) ;
 
-    //cout << average ;
-
-    for (unsigned int p = 0; p < numbers.size(); p++) {
-        numbers.at (p) = numbers.at ( p ) - average ;
+    for (int number : numbers) {
+        number = number - average ;
     }
 
     output.open (argv [ 2 ] ) ;
@@ -57,46 +54,6 @@ int main(int argc, char* argv[]) {
             output << numbers.at ( p ) << "," ;
         }
     }
-
-
-//    for (int x = 0; x < numbers.size(); x++) {
-//        cout << numbers.at(x) << ' ';
-//    }
-
-
-
-    //istringstream inSS(userInfo);
-
-
-//    string str = "1,2,3,4,5";
-//    char sep = ',';
-//
-//    vector<int> tokens = split(str, sep);
-//    for (auto &i: tokens) {
-//        cout << i << ' ';
-//    }
-//
-//    string fileLine ;
-//
-//    while ( getline ( input , fileLine ) )
-//    {
-//
-//    }
-
-//
-//
-//
-//
-//
-//    // Prints argc and argv values
-//    cout << "argc: " << argc << endl;
-//    for (i = 0; i < argc; ++i) {
-//        cout << "argv[" << i << "]: " << argv[i] << endl;
-//    }
-//
-//    cout << "Hello " << argv[1] << endl;
-//
-//    cout << "I'm " << argv[2] << endl;
 
     return 0;
 }
