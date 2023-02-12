@@ -1,0 +1,4 @@
+/Users/jenny/CLionProjects/workspace/cmake-build-debug/CMakeFiles/workspace.dir
+/Users/jenny/CLionProjects/workspace/cmake-build-debug/CMakeFiles/code1.dir
+/Users/jenny/CLionProjects/workspace/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jenny/CLionProjects/workspace/cmake-build-debug/CMakeFiles/rebuild_cache.dir

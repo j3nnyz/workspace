@@ -1,0 +1,206 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: workspace
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/jenny/CLionProjects/workspace/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target workspace
+
+
+#############################################
+# Order-only phony target for workspace
+
+build cmake_object_order_depends_target_workspace: phony || CMakeFiles/workspace.dir
+
+build CMakeFiles/workspace.dir/main.cpp.o: CXX_COMPILER__workspace_Debug /Users/jenny/CLionProjects/workspace/main.cpp || cmake_object_order_depends_target_workspace
+  DEP_FILE = CMakeFiles/workspace.dir/main.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/workspace.dir
+  OBJECT_FILE_DIR = CMakeFiles/workspace.dir
+
+build CMakeFiles/workspace.dir/ItemToPurchase.cpp.o: CXX_COMPILER__workspace_Debug /Users/jenny/CLionProjects/workspace/ItemToPurchase.cpp || cmake_object_order_depends_target_workspace
+  DEP_FILE = CMakeFiles/workspace.dir/ItemToPurchase.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/workspace.dir
+  OBJECT_FILE_DIR = CMakeFiles/workspace.dir
+
+build CMakeFiles/workspace.dir/ShoppingCart.cpp.o: CXX_COMPILER__workspace_Debug /Users/jenny/CLionProjects/workspace/ShoppingCart.cpp || cmake_object_order_depends_target_workspace
+  DEP_FILE = CMakeFiles/workspace.dir/ShoppingCart.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/workspace.dir
+  OBJECT_FILE_DIR = CMakeFiles/workspace.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target workspace
+
+
+#############################################
+# Link the executable workspace
+
+build workspace: CXX_EXECUTABLE_LINKER__workspace_Debug CMakeFiles/workspace.dir/main.cpp.o CMakeFiles/workspace.dir/ItemToPurchase.cpp.o CMakeFiles/workspace.dir/ShoppingCart.cpp.o
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5
+  OBJECT_DIR = CMakeFiles/workspace.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = workspace
+  TARGET_PDB = workspace.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target code1
+
+
+#############################################
+# Order-only phony target for code1
+
+build cmake_object_order_depends_target_code1: phony || CMakeFiles/code1.dir
+
+build CMakeFiles/code1.dir/main.cpp.o: CXX_COMPILER__code1_Debug /Users/jenny/CLionProjects/workspace/main.cpp || cmake_object_order_depends_target_code1
+  DEP_FILE = CMakeFiles/code1.dir/main.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/code1.dir
+  OBJECT_FILE_DIR = CMakeFiles/code1.dir
+
+build CMakeFiles/code1.dir/code2.cpp.o: CXX_COMPILER__code1_Debug /Users/jenny/CLionProjects/workspace/code2.cpp || cmake_object_order_depends_target_code1
+  DEP_FILE = CMakeFiles/code1.dir/code2.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/code1.dir
+  OBJECT_FILE_DIR = CMakeFiles/code1.dir
+
+build CMakeFiles/code1.dir/Distance.cpp.o: CXX_COMPILER__code1_Debug /Users/jenny/CLionProjects/workspace/Distance.cpp || cmake_object_order_depends_target_code1
+  DEP_FILE = CMakeFiles/code1.dir/Distance.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/code1.dir
+  OBJECT_FILE_DIR = CMakeFiles/code1.dir
+
+build CMakeFiles/code1.dir/ItemToPurchase.cpp.o: CXX_COMPILER__code1_Debug /Users/jenny/CLionProjects/workspace/ItemToPurchase.cpp || cmake_object_order_depends_target_code1
+  DEP_FILE = CMakeFiles/code1.dir/ItemToPurchase.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/code1.dir
+  OBJECT_FILE_DIR = CMakeFiles/code1.dir
+
+build CMakeFiles/code1.dir/ShoppingCart.cpp.o: CXX_COMPILER__code1_Debug /Users/jenny/CLionProjects/workspace/ShoppingCart.cpp || cmake_object_order_depends_target_code1
+  DEP_FILE = CMakeFiles/code1.dir/ShoppingCart.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/code1.dir
+  OBJECT_FILE_DIR = CMakeFiles/code1.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target code1
+
+
+#############################################
+# Link the executable code1
+
+build code1: CXX_EXECUTABLE_LINKER__code1_Debug CMakeFiles/code1.dir/main.cpp.o CMakeFiles/code1.dir/code2.cpp.o CMakeFiles/code1.dir/Distance.cpp.o CMakeFiles/code1.dir/ItemToPurchase.cpp.o CMakeFiles/code1.dir/ShoppingCart.cpp.o
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5
+  OBJECT_DIR = CMakeFiles/code1.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = code1
+  TARGET_PDB = code1.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/jenny/CLionProjects/workspace/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/jenny/CLionProjects/workspace/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/jenny/CLionProjects/workspace -B/Users/jenny/CLionProjects/workspace/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/jenny/CLionProjects/workspace/cmake-build-debug
+
+build all: phony workspace code1
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Users/jenny/CLionProjects/workspace/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Users/jenny/CLionProjects/workspace/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
